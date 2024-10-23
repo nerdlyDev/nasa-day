@@ -10,12 +10,10 @@ import Footer from "./components/Footer";
 //Block 2
 // This block defines the main App component and initializes state variables:
 // - data: stores the NASA APOD data fetched from the API
-// - loading: manages the loading state of the app (not used in the current code)
 // - NASA_KEY: retrieves the NASA API key from environment variables
 // - showModel: controls the visibility of the SideBar component
 export default function App() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
   const NASA_KEY = import.meta.env.VITE_NASA_API_KEY;
   const [showModel, setShowModel] = useState(false);
 
@@ -60,7 +58,8 @@ export default function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [NASA_KEY]); // Adding NASA_KEY to dependency array ensures useEffect re-runs if API key changes
+  // This helps maintain data consistency if the key is updated during runtime
 
   //Block 5
   // This block returns the JSX for rendering the app:
