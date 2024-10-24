@@ -1,8 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# NASA Day Explorer
 
-Currently, two official plugins are available:
+A React application that displays NASA's Astronomy Picture of the Day (APOD) with an explanatory sidebar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot](public/ss.png)
+
+## Features
+
+- Fetches the Astronomy Picture of the Day from NASA's APOD API
+- Displays the space image/video with its title
+- Shows detailed explanation in a clean sidebar layout
+- Responsive design that works on both desktop and mobile
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Get a NASA API key from https://api.nasa.gov/
+4. Create a `.env` file and add your API key as:
+   ```
+   REACT_APP_NASA_API_KEY=your_api_key_here
+   ```
+5. Run the development server with `npm start`
+6. Open [http://localhost:3000](http://localhost:3000) to view it in your browser
+
+## Built With
+
+- React.js
+- NASA APOD API
+- CSS Modules for styling
+
+## License
+
+This project is licensed under the MIT License
